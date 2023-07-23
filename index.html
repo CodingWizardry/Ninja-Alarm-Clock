@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container d-flex">
+        <!-- Heading -->
+        <h1 class="clock-heading">Ninjas Alarm Clock</h1> 
+        <div class="clock-container d-flex">
+            <div class="clock">
+                <!-- set time digit section   -->
+                <span class="hour">00</span>
+                <span class="colon">:</span>
+                <span class="minute">00</span>
+                <span class="colon">:</span>
+                <div class="side">
+                    <span class="second">00</span>
+                    <span class="am-pm">--</span>
+                </div>
+            </div>
+            <!-- set month and day section -->
+            <div class="days">
+                <span class="month">---</span>
+                <span class="day">---</span>
+                <span class="date">00</span>
+            </div>
+
+
+            <!-- set alaram section  -->
+            <div class="set-alarm">
+                <p class="set-alarm-heading">Set Alarm</p>
+                <div class="alarm-input">
+                    <div>
+                        <input type="number" class="set-hour" id="set-hour" required="required" placeholder="Hour">
+                        <input type="number" class="set-minute" id="set-minute" required="required"
+                            placeholder="Minute">
+                        <input type="number" class="set-sec" id="set-sec" required="required" placeholder="Second">
+                    </div>
+                    <div class="set-am-pm" id="set-am-pm">
+                        <div class="set-am set-am-active" id="set-am">AM</div>
+                        <div>-</div>
+                        <div class="set-pm" id="set-pm">PM</div>
+                    </div>
+                </div>
+                <div class="alarm-buttons">
+                    <button class="set-alarm-button">Set Alarm</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- alarm list section -->
+        <div class="alarm-list-section" id="alarm-list">
+            <ul class="alarm-list">
+                <!-- <li>
+            
+                            </li> -->
+            </ul>
+        </div>
+    </div>
+    <!-- alert and warning section -->
+    <div class="show-notification ">
+        <div class="warning ">
+            <div class="show-notification-warning-img "><i class="fa-solid fa-check"></i></div>
+            <div class="show-notification-msg" id="notification-msg"></div>
+        </div>
+    </div>
+
+    <div class="show-warning">
+        <div class="warning">
+            <div class="show-warning-img"><i class="fa-solid fa-exclamation"></i></div>
+            <div class="show-warning-msg" id="warning-msg"></div>
+        </div>
+    </div>
+
+    <!-- alarm ringing -->
+    <div id="alarm-ringing">
+        <svg viewBox="0 30 500 500" width="200" height="200">
+            <g id="svg" transform="matrix(1, 0, 0, 1, 47, 230)">
+                <circle cx="200" cy="155" r="75" />
+                <circle cx="200" cy="155" r="60" />
+                <circle cx="200" cy="155" r="45" />
+                <circle cx="200" cy="155" r="30" />
+                <circle cx="200" cy="155" r="20" />
+                <text x="200" y="155" text-anchor="middle" dy=".3em">Stop</text>
+            </g>
+        </svg>
+        <div id="snooze">
+            <div class='wave'></div>
+            <div class='wave delay1'></div>
+            <div class='wave delay2'></div>
+        </div>
+        <div class="snooze-text">Snooze</div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.8/push.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
+</html>
