@@ -804,3 +804,18 @@ text {
         min-height: auto;
     }
 }
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .clock-container {
+    padding: 10px;
+  }
+
+}
